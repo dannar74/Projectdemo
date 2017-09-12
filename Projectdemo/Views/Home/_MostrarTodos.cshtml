@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Projectdemo.Models.Videojuego>
+
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <a data-url="@Url.Content(string.Format("~/Home/MostrarVideojuego/{0}", item.Id))"
+           class="list-group-item">
+            @item.Nombre
+        </a>
+    }
+</div>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagenUrl)
+        </th>
+        <th></th>
+    </tr>*@
+
+@*@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImagenUrl)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}*@
+
+@*</table>*@
